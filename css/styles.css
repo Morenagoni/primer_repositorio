@@ -1,0 +1,701 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+body {
+    background-color: black;
+    font-size: 1.2em;
+    font-family: "roboto";
+    color: white;
+}
+
+h1 {
+    font-family: "koulen";
+    font-style: italic;
+    font-size: 1.6em;
+
+    color: black;
+    text-align: center;
+
+    margin: 10px;
+}
+
+
+h2 {
+    color: rgb(181, 155, 27);
+    text-align: center;
+    font-size: 2em;
+    font-family: koulen;
+    font-weight: 350;
+    font-stretch: extra-expanded;
+    padding: 20px;
+    animation: moveh1 0.5s;
+
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+
+@keyframes moveh1 { from {transform: scale(1.25);}
+
+to {transform: scaleX(0.5) translatey (2);}
+    
+}
+
+
+/* -----------------------------------HEADER--------------------------------------------- */
+
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.listanav li a {
+    text-decoration: none;
+    font-family: "Merriweather";
+    font-size: 1em;
+    color: white;
+    padding: 4px;
+}
+
+
+/* ---------------------------------INDEX + header mobile----------------------------------- */
+
+
+
+.grillaindex {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas: "head"
+        "main"
+        "foot";
+}
+
+header {
+    grid-area: head;
+    background-image: linear-gradient(90deg, rgb(197, 170, 15), black);
+    background-size: cover;
+    background-attachment: scroll;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: foot;
+}
+
+.greenbicha {
+    width: 100%;
+
+}
+
+/* -------------------------------INDEX DESKTOP +header desktop---------------------------- */
+
+
+@media screen and (min-width: 768px) {
+    .grillaindex {
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr auto 1fr;
+        gap: 10px;
+        grid-template-areas:
+            "head head"
+            "main main"
+            "foot foot"
+    }
+
+    header {
+        grid-area: head;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: inline-end;
+
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: foot;
+
+
+
+    }
+
+    h1 {
+        font-family: "koulen";
+        font-style: italic;
+        font-size: 2.2em;
+
+        color: rgb(62, 54, 18);
+        text-align: left;
+
+        margin: 10px;
+    
+    }
+
+    /* 
+h1:hover{     font-size: 2.3em;
+    transition: all 0.5s;} */
+
+
+header ul {
+    list-style-type: none;
+}
+
+.headerlistah1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listanav li a {
+    font-size: 1em;
+}
+
+.item-home,
+.item-prints,
+.item-bio,
+.item-contacto,
+.item-tresd {
+    padding: 30px;
+
+}
+
+.item-home:hover {
+    color: rgb(62, 54, 18);
+    font-size: 1.2em;
+    transition: all 0.5s;
+}
+
+.item-prints:hover {
+    color: rgb(62, 54, 18);
+    font-size: 1.2em;
+    transition: all 0.5s;
+}
+
+.item-bio:hover {
+    color: rgb(62, 54, 18);
+    font-size: 1.2em;
+    transition: all 0.5s;
+}
+
+.item-contacto:hover {
+    color: rgb(62, 54, 18);
+    font-size: 1.2em;
+    transition: all 0.5s;
+}
+
+.item-tresd:hover {
+    color: rgb(62, 54, 18);
+    font-size: 1.2em;
+    transition: all 0.5s;
+}
+
+.greenbicha:hover {
+    width: 103%;
+    transition: 1s
+}
+
+}
+
+
+
+/* -------------------------------------BIOGRAFIA-------------------------------- */
+
+
+
+.grillabio {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "head head"
+        "main main"
+        "foot foot"
+}
+
+header {
+    grid-area: head;
+
+}
+
+main {
+    grid-area: main;
+    padding: 2em;
+
+}
+
+footer {
+    grid-area: foot;
+}
+
+
+
+h3 .tituloguillerminasgro {
+    padding-top: 4px;
+    text-align: left;
+}
+
+.biografia ul,
+.biografia ol {
+    padding-left: 5px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+.fotobio {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+
+.recorridos {
+    text-align: justify;
+
+}
+
+.resumenobra {
+    padding: 2px;
+}
+
+.recorridos {
+    padding: 2px;
+}
+
+.titulorecorridos {
+    padding-top: 30px;
+    text-align: center;
+    font-family: koulen;
+    font-weight: 300;
+}
+
+.tituloinstalaciones,
+.titulotrabajos {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+/* ----------------------------------DESKTOP BIO------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    .fotobio {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        height: 500px;
+
+    }
+
+    .fotobio:hover {
+        height: 540px;
+        transition: 1s;
+    }
+
+    .biografia {
+        text-align: justify;
+        padding: 1em;
+    }
+
+    .resumenobra {
+        padding: 20px;
+    }
+
+    .tituloguillerminasgro {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    .biografia ul,
+    .biografia ol {
+        padding-left: 50px;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .tituloinstalaciones,
+    .titulotrabajos {
+        padding-left: 20px;
+
+    }
+
+
+}
+
+/* -----------------------------------PRINTS----------------------------------------------- */
+.oriente,
+.neobicha,
+.perrodesierto,
+.tigreblanco {
+    height: 80%;
+    width: 80%;
+    padding: 10px;
+    /* transform: rotate(20deg);}  */
+}
+
+
+.prints {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.libreriaprints, .libreriabio {animation-duration: 2s;}
+
+
+/*  ------------------------------------PRINTS DESKTOP--------------------------------------*/
+
+@media screen and (min-width: 768px) {
+    .grillaprints {
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr auto 1fr;
+        gap: 10px;
+        grid-template-areas:
+            "head head"
+            "main main"
+            "foot foot"
+    }
+
+    header {
+        grid-area: head;
+
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: foot;
+    }
+
+
+    .prints {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+
+    .oriente,
+    .neobicha,
+    .perrodesierto,
+    .tigreblanco {
+        height: 50%;
+        width: 50%;
+        padding: 10px;
+
+    }
+
+    /* .oriente:hover{
+height: 55%;
+width: 55%;
+transition: 1s;
+}  */
+
+
+
+}
+
+/* -----------------------------------------3D---------------------------------------------- */
+
+.grilla3d {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas: "head"
+        "video"
+        "virtu"
+        "foot";
+}
+
+.header3d {
+    grid-area: head;
+}
+
+.textovirual {
+    grid-area: virtu;
+}
+
+.videosmusica {
+    grid-area: video;
+}
+
+.footer3d {
+    grid-area: foot;
+}
+
+.videos3d {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2em;
+
+}
+
+
+.titulo3d {
+    text-align: center;
+}
+
+.iframerabbit,
+.iframehorriblesophie,
+.iframegorebarato {
+    padding-top: 10px;
+    padding-left: 4em;
+
+
+}
+
+.titulohorriblesophie,
+.titulowhiterabbit,
+.titulogorebarato {
+    padding-left: 2.5em;
+}
+
+.textovirtualidad,
+.titulovirtualidad {
+    padding-bottom: 4em;
+    padding-left: 3em;
+    font-size: 1.2em;
+}
+
+
+p {
+    text-align: justify
+}
+
+
+.seccionvirtualidad {
+    margin: 20px;
+}
+
+.titulovirtualidad {
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------------3D DESKTOP---------------------------------- */
+
+@media screen and (min-width: 768px) {
+    .grilla3d {
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% auto auto;
+        grid-template-rows: 8rem auto auto auto 8rem;
+        gap: 10px;
+        grid-template-areas:
+            "head head head"
+            "virtu video video"
+            "virtu video video"
+            "virtu video video"
+            "foot foot foot"
+    }
+
+    .header3d {
+        grid-area: head;
+        padding: 10px;
+    }
+
+    .textovirtual {
+        grid-area: virtu;
+        padding: 10px;
+
+    }
+
+    .videosmusica {
+        grid-area: video;
+    }
+
+    .footer3d {
+        grid-area: foot;
+    }
+}
+
+
+
+/* -----------------------------------CONTACTO------------------------------------------ */
+
+
+.maincontacto {
+    height: 400px;
+
+}
+
+
+.grillacontacto {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "head head"
+        "main main"
+        "foot foot"
+}
+
+header {
+    grid-area: head;
+
+}
+
+main {
+    grid-area: main;
+
+
+}
+
+footer {
+    grid-area: foot;
+}
+
+
+.preguntaform {
+    padding: 0.5em;
+}
+
+form input,
+form textarea {
+    background-color: rgb(187, 187, 187);
+}
+
+form .botonenviar {
+    font-family: "roboto";
+}
+
+.queremossaberdevos {
+    padding-bottom: 0;
+}
+
+
+
+
+.maincontacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* -------------------------------CONTACTO DESKTOP------------------------------------------ */
+
+
+@media screen and (min-width: 768px) {
+    .grillacontacto {
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr auto 1fr;
+        gap: 10px;
+        grid-template-areas:
+            "head head"
+            "main main"
+            "foot foot"
+    }
+
+    header {
+        grid-area: head;
+
+    }
+
+    main {
+        grid-area: main;
+
+
+    }
+
+    footer {
+        grid-area: foot;
+    }
+
+
+
+    .boxcontacto {
+        background-image: linear-gradient(180deg, black, rgb(155, 134, 13), black);
+        padding: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+
+
+    }
+
+
+    form {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+
+/* -------------------------------------------FOOTER---------------------------------------- */
+
+footer {
+    /* background-image: url(../img/marmolnegro.jpg); */
+    background-image: linear-gradient(90deg, black, rgb(155, 134, 13));
+    background-size: cover;
+    background-attachment: scroll;
+    color: white;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.logotumblr,
+.logoig {
+    width: 35px;
+}
+
+.guillefooter {
+    color: rgb(20, 17, 6);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 550;
+    padding-top: 10px;
+}
+
+.logoredes {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
