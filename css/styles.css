@@ -25,7 +25,7 @@ h1 {
 
 
 h2 {
-    color: rgb(32, 81, 172);
+    color: white;
     text-align: center;
     font-size: 2em;
     font-family: koulen;
@@ -51,7 +51,7 @@ to {transform: scaleX(0.5) translatey (2);}
 
 /* -----------------------------------HEADER--------------------------------------------- */
 
-Hola mundo soy morena -----------
+
 header ul {
     list-style-type: none;
     display: flex;
@@ -213,7 +213,7 @@ header ul {
     width: 103%;
     transition: 1s; */
 
-}
+/* } */
 
 }
 
