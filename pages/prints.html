@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link         href="https://fonts.googleapis.com/css2?family=Koulen&family=Merriweather:wght@700&family=Roboto:ital,wght@0,400;0,700;1,100;1,300&display=swap"         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link rel="stylesheet" href="../css/styles.css">
@@ -19,13 +20,13 @@
 <div class="grillaprints">
 
     <header>
-        <div class="headerlistah1">
+        <div class="headerlistah1 lg-d-flex align-items-center">
             <div class="nombresitio">
-                <h1>Guillermina Sgro</h1>
+                <h1 class="display- fw-bold lg-text-start container-fluid ">Guillermina Sgro</h1>
             </div>
-            <div class="menuprincipal">
 
-                <nav>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
                     <ul class="listanav">
                         <li class="item-home"><a href="../index.html">Home</a></li>
 
@@ -38,24 +39,73 @@
                         <li class="item-contacto"><a href="./contacto.html">Contacto</a></li>
 
                     </ul>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </div>
     </header>
-
-    <main>
-        <h2 class="tituloprints"> PRINTS Y NFT </h2>
+      <main >
+        <h2 class="tituloprints text-center"> PRINTS Y NFT </h2>
         <div class="animate__animated animate__headShake libreriaprints">
-        <div class="prints">
 
-            <img src="../img/prints/oriente.png" alt="oriente" class="oriente">
-            <img src="../img/prints/neobicha.png" alt="neobicha" class="neobicha">
-            <img src="../img/prints/greenbicha.png" alt="greenbicha" class="greenbicha">
-            <img src="../img/prints/perroendesierto.jpg" alt="perrodesierto" class="perrodesierto">
+<div class="row m-6">
+
+    <div class="col-lg-6 mb-6">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#imagen1" >
+        <img class="w-100 mb-4" src="../img/prints/oriente.png" alt="">
+        </a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#imagen2" >
+          <img class="w-100 mb-4" src="../img/prints/neobicha.png" alt="">
+        </a></div>
 
 
-        </div>
+    <div class="col-lg-6 mb-6">
+
+        <a href="#" data-bs-toggle="modal" data-bs-target="#imagen3" >
+        <img class="w-100 mb-4" src="../img/prints/greenbicha.png" alt=""></a>
+
+        <a href="#" data-bs-toggle="modal" data-bs-target="#imagen4" >
+      <img class="w-100 mb-4" src="../img/prints/perroendesierto.jpg" alt="">
+  </a>
+</div>
+</div>
+ 
     </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="imagen1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-xl modal-dialog-centered">
+    <img src="../img/prints/oriente.png" alt="" class="img-fluid rounded">
+        </div>
+  </div>
+
+  <div class="modal fade" id="imagen2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+          <img src="../img/prints/neobicha.png" alt="" class="img-fluid rounded">
+      </div>
+
+
+
+
+
+
+
+</div>
+<div class="modal fade" id="imagen3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+<img src="../img/prints/greenbicha.png" alt="" class="img-fluid rounded">
+ </div>
+</div>
+
+<div class="modal fade" id="imagen4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+<img src="../img/prints/perroendesierto.jpg" alt="" class="img-fluid rounded">
+ </div>
+</div>
+
+
+
+
+
     </main>
 
     <footer>
