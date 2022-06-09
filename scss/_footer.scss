@@ -1,0 +1,37 @@
+footer {
+    background-image: linear-gradient(90deg, $color-violeta, $color-celeste);
+    background-size: cover;
+    background-attachment: scroll;
+    color: white;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logotumblr,
+    .logoig {
+        width: 2.5em;
+        padding: 3px;
+
+        &:hover {
+            width: 2.8em;
+        }
+    }
+
+
+    .guillefooter {
+        color: rgb(20, 17, 6);
+        text-align: center;
+        font-size: 15px;
+        font-weight: 550;
+        padding-top: 10px;
+    }
+
+    .logoredes {
+        padding-top: 12px;
+        padding-bottom: 10px;
+    }
+}

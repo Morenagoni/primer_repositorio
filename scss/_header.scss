@@ -1,0 +1,77 @@
+header {
+    background-image: linear-gradient(90deg, $color-celeste, $color-violeta);
+    background-size: cover;
+    background-attachment: scroll;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    h1 {
+        font-family: "koulen";
+        font-style: italic;
+        font-size: 1.6em;
+
+        color: black;
+        text-align: center;
+
+        margin: 10px;
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+
+
+        li a {
+            text-decoration: none;
+            font-family: "Merriweather";
+            font-size: 1em;
+            color: white;
+            padding: 4px;
+
+            &:hover {
+                color: goldenrod;
+                font-size: 1.2em;
+            }
+
+            &:active {
+                font-size: 1em;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (min-width: $mobile) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: inline-end;
+
+        h1 {
+
+            font-size: 2.2em;
+            color: rgb(32, 81, 172);
+            text-align: left;
+            margin: 10px;
+        }
+
+        .headerlistah1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item-home,
+        .item-prints,
+        .item-bio,
+        .item-contacto,
+        .item-tresd {
+            padding: 30px;
+
+        }
+    }
+
+}

@@ -1,0 +1,4 @@
+@mixin sizes ($width, $height) {height: $height;
+width: $width;}
+
+// @include sizes (px, px) en styles
