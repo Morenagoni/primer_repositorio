@@ -1,3 +1,4 @@
+@charset "UTF-8";
 footer {
   background-image: linear-gradient(90deg, #8720ac, #0f97a4);
   background-size: cover;
@@ -31,12 +32,12 @@ header {
   background-image: linear-gradient(90deg, #0f97a4, #8720ac);
   background-size: cover;
   background-attachment: scroll;
-  padding: 10px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center; }
   header h1 {
+    padding-top: 10px;
     font-family: "koulen";
     font-style: italic;
     font-size: 1.6em;
@@ -52,7 +53,7 @@ header {
       font-family: "Merriweather";
       font-size: 1em;
       color: white;
-      padding: 4px; }
+      padding: 7px; }
       header ul li a:hover {
         color: goldenrod;
         font-size: 1.2em; }
@@ -78,7 +79,7 @@ header {
     header .item-bio,
     header .item-contacto,
     header .item-tresd {
-      padding: 30px; } }
+      padding: 25px; } }
 
 * {
   margin: 0;
@@ -148,3 +149,234 @@ h3 {
       grid-area: main; }
     .grillaindex footer {
       grid-area: foot; } }
+
+.grillabio {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr auto 1fr;
+  gap: 10px;
+  grid-template-areas: "head head" "main main" "foot foot"; }
+  .grillabio header {
+    grid-area: head; }
+  .grillabio main {
+    grid-area: main;
+    padding: 1em; }
+  .grillabio footer {
+    grid-area: foot; }
+  .grillabio .biografia h3 {
+    padding-top: 1em;
+    text-align: justify; }
+  .grillabio .biografia .obra p {
+    padding-top: 1em;
+    text-align: justify; }
+  .grillabio .recorridos {
+    text-align: justify;
+    padding: 2px; }
+    .grillabio .recorridos ul,
+    .grillabio .recorridos ol {
+      padding-left: 5px;
+      text-decoration: none;
+      list-style-type: none; }
+    .grillabio .recorridos h3 {
+      padding-top: 30px;
+      text-align: center;
+      font-family: koulen;
+      font-weight: 300; }
+    .grillabio .recorridos h4 {
+      font-size: larger;
+      color: #8720ac;
+      font-weight: 600;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 5px; }
+  .grillabio .fotobio {
+    display: flex;
+    justify-content: center;
+    height: 340px; }
+
+@media screen and (min-width: 768px) {
+  .fotobio {
+    height: 600px;
+    padding: 10px; }
+    .fotobio:hover {
+      height: 400px;
+      transition: 1s; }
+  .biografia {
+    text-align: justify;
+    padding: 1em; }
+    .biografia .obra p {
+      padding-top: 0; }
+    .biografia h3 {
+      text-align: justify; }
+    .biografia .recorridos h4 {
+      text-align: left; }
+    .biografia .recorridos ul,
+    .biografia .recorridos ol {
+      padding-left: 50px; } }
+
+.libreriaprints,
+.libreriabio {
+  animation-duration: 2s; }
+
+@media only screen and (max-width: 768px) {
+  .grilla3d {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas: "head" "video" "virtu" "foot"; }
+    .grilla3d .header3d {
+      grid-area: head; }
+    .grilla3d .textovirual {
+      grid-area: virtu; }
+    .grilla3d .videosmusica {
+      grid-area: video;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .grilla3d .footer3d {
+      grid-area: foot; }
+    .grilla3d .titulo3d {
+      text-align: center; }
+    .grilla3d .textovirtual {
+      text-align: justify;
+      padding-bottom: 2em;
+      padding-top: 2em;
+      font-size: 1.2em;
+      padding-left: 0.5em;
+      padding-right: 0.5em; }
+      .grilla3d .textovirtual p {
+        text-align: justify; }
+    .grilla3d .videos3d {
+      width: 350px;
+      margin: auto; }
+      .grilla3d .videos3d h3 {
+        padding-top: 1em;
+        font-size: 1.2em; }
+      .grilla3d .videos3d .whiterabbit,
+      .grilla3d .videos3d .horriblesophie,
+      .grilla3d .videos3d .gorebarato {
+        height: 0px;
+        width: 100%;
+        max-width: 350px;
+        padding-top: 56.25%;
+        position: relative; }
+      .grilla3d .videos3d .iframerabbit,
+      .grilla3d .videos3d .iframegorebarato,
+      .grilla3d .videos3d .iframehorriblesophie {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        padding-top: 10px; } }
+
+@media screen and (min-width: 768px) {
+  .grilla3d {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% auto auto;
+    grid-template-rows: 8rem auto auto auto 8rem;
+    gap: 10px;
+    grid-template-areas: "head head head" "virtu video video" "virtu video video" "virtu video video" "foot foot foot"; }
+    .grilla3d header {
+      grid-area: head;
+      padding: 10px; }
+    .grilla3d .textovirtual {
+      grid-area: virtu;
+      padding: 10px;
+      text-align: justify; }
+    .grilla3d .videosmusica {
+      grid-area: video; }
+    .grilla3d .footer3d {
+      grid-area: foot; }
+    .grilla3d .videos3d {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 2em; }
+      .grilla3d .videos3d h2 {
+        text-align: center; }
+      .grilla3d .videos3d h3 {
+        padding-top: 1em; }
+      .grilla3d .videos3d iframe {
+        padding-top: 10px; }
+    .grilla3d .textovirtual {
+      margin: 20px; }
+      .grilla3d .textovirtual .textovirtualidad,
+      .grilla3d .textovirtual .titulovirtualidad {
+        padding-bottom: 4em;
+        padding-left: 2em;
+        font-size: 1.2em;
+        padding-top: 4.5em; } }
+
+.grillacontacto {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr auto 1fr;
+  gap: 10px;
+  grid-template-areas: "head head" "main main" "foot foot"; }
+  .grillacontacto header {
+    grid-area: head; }
+  .grillacontacto main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: main;
+    padding-bottom: 20px;
+    padding-bottom: 3em; }
+    .grillacontacto main h2 {
+      padding-bottom: 10px; }
+    .grillacontacto main .boxcontacto form .formaño {
+      text-align: center;
+      padding-top: 20px; }
+      .grillacontacto main .boxcontacto form .formaño input {
+        background-color: #bbbbbb; }
+    .grillacontacto main .boxcontacto form .formpregunta {
+      padding: 20px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .grillacontacto main .boxcontacto form .formpregunta textarea {
+        background-color: #bbbbbb; }
+      .grillacontacto main .boxcontacto form .formpregunta h4 {
+        text-align: center;
+        padding: 0.5em; }
+      .grillacontacto main .boxcontacto form .formpregunta .botonenviar {
+        font-family: "roboto";
+        background-image: linear-gradient(90deg, #0f97a4, #8720ac); }
+  .grillacontacto footer {
+    grid-area: foot; }
+
+@media screen and (min-width: 768px) {
+  .grillacontacto main .boxcontacto form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    gap: 10px;
+    grid-template-areas: "año pregunta"; }
+    .grillacontacto main .boxcontacto form .formaño {
+      text-align: left;
+      grid-area: año;
+      padding-left: 4em;
+      padding-top: 4em; }
+      .grillacontacto main .boxcontacto form .formaño label {
+        padding-right: 10px; }
+    .grillacontacto main .boxcontacto form .formpregunta {
+      grid-area: pregunta; }
+      .grillacontacto main .boxcontacto form .formpregunta textarea {
+        width: 80%;
+        height: 80%; }
+      .grillacontacto main .boxcontacto form .formpregunta input {
+        width: 80%; }
+      .grillacontacto main .boxcontacto form .formpregunta h4 {
+        text-align: left;
+        padding-left: 0px; } }

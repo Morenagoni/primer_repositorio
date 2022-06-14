@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     font-size: 1.2em;
     font-family: "roboto";
     color: white;
@@ -68,12 +68,14 @@ h3 {
         grid-area: foot;
     }
 
-    @media screen and (max-width: $mobile) {  .videoindex {
-        width: 100%;
-        height: 100%;
+    @media screen and (max-width: $mobile) {
+        .videoindex {
+            width: 100%;
+            height: 100%;
+        }
     }
-}}
-  
+}
+
 
 // ---------------------INDEX DESKTOP---------- >>>>
 
@@ -121,3 +123,430 @@ h3 {
 
 
 }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>BIO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+.grillabio {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "head head"
+        "main main"
+        "foot foot";
+
+    header {
+        grid-area: head;
+
+    }
+
+    main {
+        grid-area: main;
+        padding: 1em;
+
+    }
+
+    footer {
+        grid-area: foot;
+    }
+
+
+    .biografia {
+
+        h3 {
+            padding-top: 1em;
+            text-align: justify;
+        }
+
+        .obra {
+            p {
+                padding-top: 1em;
+                text-align: justify;
+            }
+        }
+
+    }
+
+    .recorridos {
+        text-align: justify;
+        padding: 2px;
+
+        ul,
+        ol {
+            padding-left: 5px;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        h3 {
+            padding-top: 30px;
+            text-align: center;
+            font-family: koulen;
+            font-weight: 300;
+        }
+
+        h4 {
+            font-size: larger;
+            color: $color-violeta;
+            font-weight: 600;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 5px;
+        }
+    }
+
+    .fotobio {
+        display: flex;
+        justify-content: center;
+        height: 340px;
+    }
+
+
+}
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<DEKTOP BIO >>>>>>>>>>>>>>>>>>>>>>>>
+
+@media screen and (min-width: 768px) {
+    .fotobio {
+        height: 600px;
+        padding: 10px;
+
+        &:hover {
+            height: 400px;
+            transition: 1s;
+        }
+
+    }
+
+    .biografia {
+        text-align: justify;
+        padding: 1em;
+
+        .obra {
+            p {
+                padding-top: 0;
+            }
+        }
+
+        h3 {
+            text-align: justify;
+        }
+
+        .recorridos {
+            h4 {
+                text-align: left;
+            }
+
+            ul,
+            ol {
+                padding-left: 50px;
+            }
+
+        }
+    }
+
+}
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<PRINTS -hecho con bootstrap>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.libreriaprints,
+.libreriabio {
+    animation-duration: 2s;
+}
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 3D >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+@media only screen and (max-width: 768px) {
+    .grilla3d {
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr auto auto 1fr;
+        grid-template-areas: "head"
+            "video"
+            "virtu"
+            "foot";
+
+
+        .header3d {
+            grid-area: head;
+        }
+
+        .textovirual {
+            grid-area: virtu;
+        }
+
+        .videosmusica {
+            grid-area: video;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .footer3d {
+            grid-area: foot;
+        }
+
+
+        .titulo3d {
+            text-align: center;
+        }
+
+        .textovirtual {
+            text-align: justify;
+            padding-bottom: 2em;
+            padding-top: 2em;
+            font-size: 1.2em;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+
+            p {
+                text-align: justify
+            }
+        }
+
+
+        .videos3d {
+            width: 350px;
+            margin: auto;
+
+            h3 {
+                padding-top: 1em;
+                font-size: 1.2em;
+            }
+
+            .whiterabbit,
+            .horriblesophie,
+            .gorebarato {
+                height: 0px;
+                width: 100%;
+                max-width: 350px;
+                padding-top: 56.25%;
+                position: relative;
+            }
+
+            .iframerabbit,
+            .iframegorebarato,
+            .iframehorriblesophie {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0px;
+                left: 0px;
+                padding-top: 10px;
+            }
+        }
+
+
+    }
+}
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<3D DESKTOP>>>>>>>>>>>>>>>>>>>>>>>
+
+@media screen and (min-width: 768px) {
+    .grilla3d {
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% auto auto;
+        grid-template-rows: 8rem auto auto auto 8rem;
+        gap: 10px;
+        grid-template-areas:
+            "head head head"
+            "virtu video video"
+            "virtu video video"
+            "virtu video video"
+            "foot foot foot";
+
+
+        header {
+            grid-area: head;
+            padding: 10px;
+        }
+
+        .textovirtual {
+            grid-area: virtu;
+            padding: 10px;
+            text-align: justify;
+
+        }
+
+        .videosmusica {
+            grid-area: video;
+        }
+
+        .footer3d {
+            grid-area: foot;
+        }
+
+        .videos3d {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 2em;
+
+            h2 {
+                text-align: center;
+            }
+
+            h3 {
+                padding-top: 1em;
+            }
+
+            iframe {
+                padding-top: 10px;
+            }
+
+
+        }
+
+        .textovirtual {
+            margin: 20px;
+
+            .textovirtualidad,
+            .titulovirtualidad {
+                padding-bottom: 4em;
+                padding-left: 2em;
+                font-size: 1.2em;
+                padding-top: 4.5em;
+            }
+
+        }
+    }
+}
+
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>CONTACTO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+.grillacontacto {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "head head"
+        "main main"
+        "foot foot";
+
+
+    header {
+        grid-area: head;
+    }
+
+    main {    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-area: main;
+        padding-bottom: 20px;
+         padding-bottom: 3em;
+        
+        h2 {
+            padding-bottom: 10px;
+        }
+
+        .boxcontacto { 
+
+            form {
+          
+
+                .formaño {
+                    text-align: center;
+                    padding-top: 20px;
+
+                    input {
+                        background-color: rgb(187, 187, 187);
+                    }
+                }
+
+
+                .formpregunta {
+                    padding: 20px;
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    textarea {
+                        background-color: rgb(187, 187, 187);
+                    }
+
+                    h4 {
+                        text-align: center;
+                        padding: 0.5em;
+                                            }
+
+                    .botonenviar {
+                        font-family: "roboto";
+                        background-image: linear-gradient(90deg, rgb(15, 151, 164), rgb(135, 32, 172));
+                    }
+
+
+
+                }
+            }
+        }
+
+        }
+
+    footer {
+            grid-area: foot;
+        }
+
+        }
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<CONTACTO DESKTOP>>>>>>>>>>>>>
+
+    @media screen and (min-width: 768px) {
+        .grillacontacto {
+
+
+            main {
+                .boxcontacto {
+
+                    form {
+                        display: grid;
+                        grid-template-columns: 50% 50%;
+                        grid-template-rows: 100%;
+                        gap: 10px;
+                        grid-template-areas:
+                            "año pregunta";
+
+                        .formaño {
+                            text-align: left;
+                            grid-area: año;
+                            padding-left: 4em;
+                            padding-top: 4em;
+                            label {padding-right: 10px;}
+                        }
+
+                        .formpregunta {
+                            grid-area: pregunta;
+
+                            textarea {width: 80%;
+                            height: 80%;}
+                            input {width: 80%;}
+
+                            h4 {
+                                text-align: left;
+                            padding-left: 0px;
+                            }
+                        }
+
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
