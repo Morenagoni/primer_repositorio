@@ -1,3 +1,21 @@
-$mobile: 768px;
-$color-celeste: rgb(15, 151, 164);
-$color-violeta: rgb(135, 32, 172);
+
+
+// BREAKPOINTS<<<<<<<<<<<<
+$desktop: 768px;
+
+// colores
+$celeste: rgb(15, 151, 164);
+$violeta: rgb(135, 32, 172);
+$textowhite: white;
+$colordark: black;
+
+
+// TEMAS<<<<<<<<<<<<<<<
+$theme:oscu;
+
+// MAPAS <<<<<<<<<<<<<<<<<<<<<<
+
+$mapacolors:(primary:black,celeste:#0f97a4,violeta:#8720ac, violeta-light:lighten(#8720ac, 30%),celeste-light:lighten(#0f97a4, 20%),text-light:white,text-dark:black);
+
+
+

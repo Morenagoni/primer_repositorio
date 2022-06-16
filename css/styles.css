@@ -3,27 +3,31 @@ footer {
   background-image: linear-gradient(90deg, #8720ac, #0f97a4);
   background-size: cover;
   background-attachment: scroll;
-  color: white;
   width: 100%;
   position: relative;
   bottom: 0;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  footer .logotumblr,
-  footer .logoig {
+  align-items: center;
+  background-color: black;
+  color: white; }
+  footer .logoig, footer .logotumblr {
     width: 2.5em;
-    padding: 3px; }
-    footer .logotumblr:hover,
-    footer .logoig:hover {
+    height: 2.5em; }
+    footer .logoig:hover, footer .logotumblr:hover {
       width: 2.8em; }
+  footer .logotumblr {
+    background-color: goldenrod; }
   footer .guillefooter {
     color: #141106;
     text-align: center;
     font-size: 15px;
     font-weight: 550;
     padding-top: 10px; }
+    @media (min-width: 768px) {
+      footer .guillefooter {
+        font-size: 1em; } }
   footer .logoredes {
     padding-top: 12px;
     padding-bottom: 10px; }
@@ -32,7 +36,6 @@ header {
   background-image: linear-gradient(90deg, #0f97a4, #8720ac);
   background-size: cover;
   background-attachment: scroll;
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center; }
@@ -42,11 +45,11 @@ header {
     font-style: italic;
     font-size: 1.6em;
     color: black;
-    text-align: center;
-    margin: 10px; }
+    text-align: center; }
   header ul {
     list-style-type: none;
     display: flex;
+    flex-direction: row;
     justify-content: center; }
     header ul li a {
       text-decoration: none;
@@ -56,7 +59,8 @@ header {
       padding: 7px; }
       header ul li a:hover {
         color: goldenrod;
-        font-size: 1.2em; }
+        font-size: 1.2em;
+        padding: 0; }
       header ul li a:active {
         font-size: 1em; }
 
@@ -90,7 +94,8 @@ body {
   background-color: black;
   font-size: 1.2em;
   font-family: "roboto";
-  color: white; }
+  color: white;
+  height: 100%; }
 
 h2 {
   color: white;
@@ -198,7 +203,7 @@ h3 {
 
 @media screen and (min-width: 768px) {
   .fotobio {
-    height: 600px;
+    height: 380px;
     padding: 10px; }
     .fotobio:hover {
       height: 400px;
@@ -367,14 +372,14 @@ h3 {
       text-align: left;
       grid-area: año;
       padding-left: 4em;
-      padding-top: 4em; }
+      padding-top: 6em; }
       .grillacontacto main .boxcontacto form .formaño label {
         padding-right: 10px; }
     .grillacontacto main .boxcontacto form .formpregunta {
       grid-area: pregunta; }
       .grillacontacto main .boxcontacto form .formpregunta textarea {
         width: 80%;
-        height: 80%; }
+        height: 70%; }
       .grillacontacto main .boxcontacto form .formpregunta input {
         width: 80%; }
       .grillacontacto main .boxcontacto form .formpregunta h4 {

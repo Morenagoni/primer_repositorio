@@ -1,8 +1,22 @@
+@import 'mixins';
+@import 'variables';
+
+// background-image: linear-gradient(90deg, $violeta, $celeste);
+// background-size:cover;
+// background-attachment: scroll;
+
+
 footer {
-    background-image: linear-gradient(90deg, $color-violeta, $color-celeste);
-    background-size: cover;
-    background-attachment: scroll;
-    color: white;
+    background: {
+        image: linear-gradient(90deg, $violeta, $celeste);
+        size: cover;
+        attachment: scroll;
+    }
+
+    @function color($color-name) {
+        @return map-get($mapacolors, text-light);
+    }
+
     width: 100%;
     position: relative;
     bottom: 0;
@@ -11,16 +25,26 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    .logotumblr,
+
+
+    //    .logotumblr,
+    //     .logoig { @include sizes (2.5em,3px);
+    //          &:hover {
+    //         width: 2.8em;
+    //     }
+    // }
     .logoig {
-        width: 2.5em;
-        padding: 3px;
+        @include sizes(2.5em, 2.5em);
 
         &:hover {
             width: 2.8em;
         }
     }
 
+    .logotumblr {
+        @extend .logoig;
+        background-color: goldenrod;
+    }
 
     .guillefooter {
         color: rgb(20, 17, 6);
@@ -28,10 +52,24 @@ footer {
         font-size: 15px;
         font-weight: 550;
         padding-top: 10px;
+
+        @include desktop{
+            font-size: 1em;
+                  }
     }
 
     .logoredes {
         padding-top: 12px;
         padding-bottom: 10px;
+    }
+
+    @if $theme==oscu {
+        background-color: $colordark;
+        color: $textowhite;
+    }
+
+    @else {
+        background-image: linear-gradient (90deg, $violeta, $celeste);
+        color: $colordark;
     }
 }

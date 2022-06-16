@@ -1,7 +1,7 @@
-@import 'variables';
 @import 'footer';
 @import 'header';
 @import 'mixins';
+@import 'variables';
 
 
 * {
@@ -14,11 +14,12 @@ body {
     background-color: black;
     font-size: 1.2em;
     font-family: "roboto";
-    color: white;
+    color: $textowhite;
+    height: 100%;
 }
 
 h2 {
-    color: white;
+    color: $textowhite;
     text-align: center;
     font-size: 2em;
     font-family: koulen;
@@ -45,6 +46,8 @@ h3 {
     color: rgb(124, 184, 190);
 }
 
+
+
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>INDEX<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
@@ -68,7 +71,7 @@ h3 {
         grid-area: foot;
     }
 
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $desktop) {
         .videoindex {
             width: 100%;
             height: 100%;
@@ -80,7 +83,7 @@ h3 {
 // ---------------------INDEX DESKTOP---------- >>>>
 
 
-@media screen and (min-width: $mobile) {
+@media screen and (min-width: $desktop) {
 
     .mainindex {
         display: flex;
@@ -191,7 +194,7 @@ h3 {
 
         h4 {
             font-size: larger;
-            color: $color-violeta;
+            color: $violeta;
             font-weight: 600;
             text-align: center;
             padding-top: 20px;
@@ -210,9 +213,9 @@ h3 {
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<DEKTOP BIO >>>>>>>>>>>>>>>>>>>>>>>>
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $desktop) {
     .fotobio {
-        height: 600px;
+        height: 380px;
         padding: 10px;
 
         &:hover {
@@ -261,7 +264,7 @@ h3 {
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 3D >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: $desktop) {
     .grilla3d {
         height: auto;
         width: 100%;
@@ -350,7 +353,7 @@ h3 {
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<3D DESKTOP>>>>>>>>>>>>>>>>>>>>>>>
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $desktop) {
     .grilla3d {
         height: auto;
         width: 100%;
@@ -487,7 +490,7 @@ h3 {
 
                     .botonenviar {
                         font-family: "roboto";
-                        background-image: linear-gradient(90deg, rgb(15, 151, 164), rgb(135, 32, 172));
+                        background-image: linear-gradient(90deg, $celeste, $violeta);
                     }
 
 
@@ -505,7 +508,7 @@ h3 {
         }
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<CONTACTO DESKTOP>>>>>>>>>>>>>
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $desktop) {
         .grillacontacto {
 
 
@@ -524,7 +527,7 @@ h3 {
                             text-align: left;
                             grid-area: año;
                             padding-left: 4em;
-                            padding-top: 4em;
+                            padding-top: 6em;
                             label {padding-right: 10px;}
                         }
 
@@ -532,8 +535,9 @@ h3 {
                             grid-area: pregunta;
 
                             textarea {width: 80%;
-                            height: 80%;}
-                            input {width: 80%;}
+                            height: 70%;}
+                            input {width: 80%;
+                            }
 
                             h4 {
                                 text-align: left;
@@ -550,3 +554,6 @@ h3 {
             }
         }
     }
+
+
+    
