@@ -13,21 +13,17 @@ footer {
   background-color: black;
   color: white; }
   footer .logoig, footer .logotumblr {
-    width: 2.5em;
-    height: 2.5em; }
+    width: 2.3em;
+    height: 2.3em; }
     footer .logoig:hover, footer .logotumblr:hover {
-      width: 2.8em; }
-  footer .logotumblr {
-    background-color: goldenrod; }
+      width: 2.8em;
+      height: 2.8em; }
   footer .guillefooter {
     color: #141106;
     text-align: center;
     font-size: 15px;
     font-weight: 550;
     padding-top: 10px; }
-    @media (min-width: 768px) {
-      footer .guillefooter {
-        font-size: 1em; } }
   footer .logoredes {
     padding-top: 12px;
     padding-bottom: 10px; }
@@ -59,8 +55,7 @@ header {
       padding: 7px; }
       header ul li a:hover {
         color: goldenrod;
-        font-size: 1.2em;
-        padding: 0; }
+        font-size: 1.2em; }
       header ul li a:active {
         font-size: 1em; }
 

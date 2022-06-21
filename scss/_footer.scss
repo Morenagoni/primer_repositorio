@@ -1,11 +1,6 @@
 @import 'mixins';
 @import 'variables';
 
-// background-image: linear-gradient(90deg, $violeta, $celeste);
-// background-size:cover;
-// background-attachment: scroll;
-
-
 footer {
     background: {
         image: linear-gradient(90deg, $violeta, $celeste);
@@ -13,9 +8,13 @@ footer {
         attachment: scroll;
     }
 
-    @function color($color-name) {
-        @return map-get($mapacolors, text-light);
-    }
+    // @function color($color-name) {
+    //     @return map-get($mapacolors, text-light);
+    // }
+
+// ver por que no funcionan los colores del mapa background-color: color(text-light)
+
+
 
     width: 100%;
     position: relative;
@@ -27,23 +26,18 @@ footer {
 
 
 
-    //    .logotumblr,
-    //     .logoig { @include sizes (2.5em,3px);
-    //          &:hover {
-    //         width: 2.8em;
-    //     }
-    // }
     .logoig {
-        @include sizes(2.5em, 2.5em);
+        @include sizes(2.3em, 2.3em);
 
         &:hover {
             width: 2.8em;
+            height: 2.8em;
         }
     }
 
     .logotumblr {
         @extend .logoig;
-        background-color: goldenrod;
+      
     }
 
     .guillefooter {
@@ -53,9 +47,7 @@ footer {
         font-weight: 550;
         padding-top: 10px;
 
-        @include desktop{
-            font-size: 1em;
-                  }
+
     }
 
     .logoredes {
