@@ -100,7 +100,7 @@ h2 {
   font-weight: 350;
   font-stretch: extra-expanded;
   padding: 20px;
-  animation: moveh1 0.5s; }
+  animation: moveh1 1.5s; }
 
 @keyframes moveh1 {
   from {
@@ -168,8 +168,11 @@ h3 {
   .grillabio .biografia h3 {
     padding-top: 1em;
     text-align: justify; }
-  .grillabio .biografia .obra p {
-    padding-top: 1em;
+  .grillabio .biografia .obra .p1,
+  .grillabio .biografia .obra .p2,
+  .grillabio .biografia .obra .p3,
+  .grillabio .biografia .obra .p4 {
+    font-size: 1em;
     text-align: justify; }
   .grillabio .recorridos {
     text-align: justify;
@@ -194,31 +197,35 @@ h3 {
   .grillabio .fotobio {
     display: flex;
     justify-content: center;
-    height: 340px; }
+    height: 300px; }
 
 @media screen and (min-width: 768px) {
-  .fotobio {
-    height: 380px;
+  .grillabio main .fotobio {
+    height: 500px;
     padding: 10px; }
-    .fotobio:hover {
-      height: 400px;
-      transition: 1s; }
-  .biografia {
-    text-align: justify;
-    padding: 1em; }
-    .biografia .obra p {
-      padding-top: 0; }
-    .biografia h3 {
-      text-align: justify; }
-    .biografia .recorridos h4 {
-      text-align: left; }
-    .biografia .recorridos ul,
-    .biografia .recorridos ol {
-      padding-left: 50px; } }
+  .grillabio main .biografia h3 {
+    font-size: 1.6em; }
+  .grillabio main .biografia .obra .p1 {
+    font-size: 1.5em; }
+  .grillabio main .biografia .obra .p2 {
+    font-size: 1.5em; }
+  .grillabio main .biografia .obra .p3 {
+    font-size: 1.5em; }
+  .grillabio main .biografia .obra .p4 {
+    font-size: 1.5em; }
+  .grillabio main .biografia .recorridos h3 {
+    text-align: center;
+    font-size: 1.6em; }
+  .grillabio main .biografia .recorridos h4 {
+    font-size: 1.5em;
+    text-align: left; }
+  .grillabio main .biografia .recorridos ul,
+  .grillabio main .biografia .recorridos ol {
+    font-size: larger;
+    padding-left: 50px; } }
 
-.libreriaprints,
-.libreriabio {
-  animation-duration: 2s; }
+.animate__animated.animate__headShake {
+  --animate-duration: 3.5s; }
 
 @media only screen and (max-width: 768px) {
   .grilla3d {

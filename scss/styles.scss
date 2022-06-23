@@ -26,7 +26,7 @@ h2 {
     font-weight: 350;
     font-stretch: extra-expanded;
     padding: 20px;
-    animation: moveh1 0.5s;
+    animation: moveh1 1.5s;
 
     @keyframes moveh1 {
         from {
@@ -45,8 +45,6 @@ h3 {
     font-size: 1.4em;
     color: rgb(124, 184, 190);
 }
-
-
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>INDEX<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -128,8 +126,6 @@ h3 {
 }
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>BIO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
 .grillabio {
     height: auto;
     width: 100%;
@@ -166,9 +162,13 @@ h3 {
         }
 
         .obra {
-            p {
-                padding-top: 1em;
-                text-align: justify;
+
+            .p1,
+            .p2,
+            .p3,
+            .p4 {
+                font-size: 1em;
+text-align: justify;
             }
         }
 
@@ -205,61 +205,85 @@ h3 {
     .fotobio {
         display: flex;
         justify-content: center;
-        height: 340px;
+        height: 300px;
     }
 
 
-}
+} 
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<DEKTOP BIO >>>>>>>>>>>>>>>>>>>>>>>>
+@media screen and (min-width: $desktop) 
+{
+    .grillabio {
+        main {
 
-@media screen and (min-width: $desktop) {
-    .fotobio {
-        height: 380px;
-        padding: 10px;
+            .fotobio {
+                height: 500px;
+                padding: 10px;
+            }
 
-        &:hover {
-            height: 400px;
-            transition: 1s;
+            .biografia {
+                
+                h3 {
+                    font-size: 1.6em;
+                }
+
+                .obra {
+
+                    .p1 {
+                        font-size: 1.5em;
+                       
+
+                    }
+                    .p2 {
+                        font-size: 1.5em;
+                  
+
+                    }
+                    .p3 {
+                        font-size: 1.5em;
+                        
+                        
+
+                    }
+                    .p4 {
+                        font-size: 1.5em;
+                       
+                       
+
+                    }
+                    
+                }
+            
+
+                .recorridos {
+                    h3 {
+                        text-align: center;
+                        font-size: 1.6em;
+                      
+                    }
+                    h4 {
+                        font-size: 1.5em;
+                        text-align: left;
+                    }
+
+                    ul,
+                    ol {
+                        font-size: larger;
+                        padding-left: 50px;
+                    }
+
+                }
+            }
         }
-
     }
-
-    .biografia {
-        text-align: justify;
-        padding: 1em;
-
-        .obra {
-            p {
-                padding-top: 0;
-            }
-        }
-
-        h3 {
-            text-align: justify;
-        }
-
-        .recorridos {
-            h4 {
-                text-align: left;
-            }
-
-            ul,
-            ol {
-                padding-left: 50px;
-            }
-
-        }
-    }
-
 }
+
+
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<PRINTS -hecho con bootstrap>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.libreriaprints,
-.libreriabio {
-    animation-duration: 2s;
-}
+.animate__animated.animate__headShake {--animate-duration: 3.5s;}
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 3D >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
