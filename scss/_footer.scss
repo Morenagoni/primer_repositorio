@@ -5,22 +5,15 @@
 * {
     margin: 0;
     box-sizing: border-box;
-     padding: 0;
+    padding: 0;
 }
+
 footer {
     background: {
         image: linear-gradient(90deg, $violeta, $celeste);
         size: cover;
         attachment: scroll;
     }
-
-    // @function color($color-name) {
-    //     @return map-get($mapacolors, text-light);
-    // }
-
-// ver por que no funcionan los colores del mapa background-color: color(text-light)
-
-
 
     width: 100%;
     position: relative;
@@ -29,8 +22,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 
     .logoig {
         @include sizes(2.3em, 2.3em);
@@ -43,31 +34,30 @@ footer {
 
     .logotumblr {
         @extend .logoig;
-      
+
     }
 
     .guillefooter {
-        color: rgb(20, 17, 6);
+        color: $colordark;
         text-align: center;
         font-size: 15px;
-        font-weight: 550;
+        font-weight: 520;
         padding-top: 10px;
-
-
     }
 
     .logoredes {
-        padding-top: 12px;
+        padding-top: 10px;
         padding-bottom: 10px;
     }
 
-    @if $theme==oscu {
-        background-color: $colordark;
+  
+@media screen and (min-width: $desktop) {
+    .guillefooter {
         color: $textowhite;
     }
 
-    @else {
-        background-image: linear-gradient (90deg, $violeta, $celeste);
-        color: $colordark;
-    }
 }
+
+
+}
+

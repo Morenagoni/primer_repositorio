@@ -1,5 +1,3 @@
-
-
 // BREAKPOINTS<<<<<<<<<<<<
 $desktop: 768px;
 
@@ -8,14 +6,16 @@ $celeste: rgb(15, 151, 164);
 $violeta: rgb(135, 32, 172);
 $textowhite: white;
 $colordark: black;
+$formback: rgba(39, 38, 38, 0.8);
+$form: rgb(187, 187, 187);  
+$colorborder: rgb(66, 66, 66);
+$menuresponsive: rgba(0, 0, 0, 0.3);
+$iconoresponsive: rgba(0, 0, 0, 0.7);
 
-
-// TEMAS<<<<<<<<<<<<<<<
-$theme:oscu;
 
 // MAPAS <<<<<<<<<<<<<<<<<<<<<<
 
-$mapacolors:(primary:black,celeste:#0f97a4,violeta:#8720ac, violeta-light:lighten(#8720ac, 30%),celeste-light:lighten(#0f97a4, 20%),text-light:white,text-dark:black);
+$mapacolores:(celeste:#0f97a4,violeta:#8720ac, text-dark:black,violeta-light:lighten(#8720ac, 30%),celeste-light:lighten(#0f97a4, 20%),text-light:white,);
 
 
 
