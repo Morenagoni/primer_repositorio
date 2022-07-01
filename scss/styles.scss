@@ -63,6 +63,8 @@ h3 {
 
     main {
         grid-area: main;
+        margin-top: 3em;
+        margin-bottom: 3em;
     }
 
     footer {
@@ -132,8 +134,7 @@ h3 {
     display: grid;
     grid-template-columns: fit-content 50% 50%;
     grid-template-rows: 1fr auto 1fr;
-    gap: 10px;
-    grid-template-areas:
+        grid-template-areas:
         "head head"
         "main main"
         "foot foot";
@@ -145,7 +146,8 @@ h3 {
 
     main {
         grid-area: main;
-        padding: 1em;
+        overflow-x: hidden;
+        padding: 0.8em;
 
     }
 
@@ -166,8 +168,8 @@ h3 {
             .p1,
             .p2,
             .p3,
-            .p4 {
-                font-size: 1em;
+            .p4 { 
+                font-size: 1.2em;
 text-align: justify;
             }
         }
@@ -177,6 +179,7 @@ text-align: justify;
     .recorridos {
         text-align: justify;
         padding: 2px;
+        font-size: 1.2em;
 
         ul,
         ol {
@@ -188,8 +191,9 @@ text-align: justify;
         h3 {
             padding-top: 30px;
             text-align: center;
-            font-family: koulen;
-            font-weight: 300;
+            font: {family: "koulen";
+            weight: 300;
+            size: 1.3em;}
         }
 
         h4 {
@@ -205,7 +209,8 @@ text-align: justify;
     .fotobio {
         display: flex;
         justify-content: center;
-        height: 300px;
+.fotoguille {width:350px;}
+       
     }
 
 
@@ -215,11 +220,11 @@ text-align: justify;
 @media screen and (min-width: $desktop) 
 {
     .grillabio {
-        main {
+        main { padding: 1em;
 
             .fotobio {
-                height: 500px;
-                padding: 10px;
+                               padding: 10px;
+                               .fotoguille {width:500px;}
             }
 
             .biografia {
@@ -230,32 +235,14 @@ text-align: justify;
 
                 .obra {
 
-                    .p1 {
+                    .p1, .p2, .p3, .p4 {
                         font-size: 1.5em;
-                       
-
+                   
                     }
-                    .p2 {
-                        font-size: 1.5em;
                   
-
-                    }
-                    .p3 {
-                        font-size: 1.5em;
-                        
-                        
-
-                    }
-                    .p4 {
-                        font-size: 1.5em;
-                       
-                       
-
-                    }
                     
                 }
             
-
                 .recorridos {
                     h3 {
                         text-align: center;
@@ -283,10 +270,10 @@ text-align: justify;
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<PRINTS -hecho con bootstrap>>>>>>>>>>>>>>>>>>>>>>>>>
 
+main {overflow-x: hidden}
 .animate__animated.animate__headShake {--animate-duration: 3.5s;}
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 3D >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
 
 @media only screen and (max-width: $desktop) {
     .grilla3d {
@@ -305,11 +292,7 @@ text-align: justify;
             grid-area: head;
         }
 
-        .textovirual {
-            grid-area: virtu;
-        }
-
-        .videosmusica {
+                .videosmusica {
             grid-area: video;
             display: flex;
             flex-direction: column;
@@ -327,6 +310,7 @@ text-align: justify;
         }
 
         .textovirtual {
+            grid-area: virtu;
             text-align: justify;
             padding-bottom: 2em;
             padding-top: 2em;
@@ -398,14 +382,7 @@ text-align: justify;
             padding: 10px;
         }
 
-        .textovirtual {
-            grid-area: virtu;
-            padding: 10px;
-            text-align: justify;
-
-        }
-
-        .videosmusica {
+               .videosmusica {
             grid-area: video;
         }
 
@@ -436,14 +413,16 @@ text-align: justify;
         }
 
         .textovirtual {
-            margin: 20px;
+            grid-area: virtu;
+            padding: 3px;
+            text-align: left;
 
             .textovirtualidad,
             .titulovirtualidad {
-                padding-bottom: 4em;
-                padding-left: 2em;
-                font-size: 1.2em;
-                padding-top: 4.5em;
+                padding-bottom: 3.5em;
+                padding-left: 0.9em;
+                font-size: 1.5em;
+                padding-top: 4em;
             }
 
         }
@@ -452,49 +431,67 @@ text-align: justify;
 
 //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>CONTACTO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-
 .grillacontacto {
     height: auto;
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr auto 1fr;
-    gap: 10px;
-    grid-template-areas:
+        grid-template-areas:
         "head head"
         "main main"
         "foot foot";
-
 
     header {
         grid-area: head;
     }
 
-    main {    display: flex;
+    main {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         grid-area: main;
-        padding-bottom: 20px;
-         padding-bottom: 3em;
+        padding-bottom: 3em;
         
         h2 {
             padding-bottom: 10px;
         }
 
-        .boxcontacto { 
+        .boxcontacto {
 
             form {
-          
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
-                .formaño {
-                    text-align: center;
-                    padding-top: 20px;
+                .añolugar {
+                    margin: 1em;
+                    border: 1px solid rgb(66, 66, 66);
+                    padding: 1.6em;
+                    background-image: url(../img/backgrounds/marmolnegrotransp2.png);
 
-                    input {
-                        background-color: rgb(187, 187, 187);
+                    .formaño {
+                        text-align: center;
+
+                        input {
+                            background-color: rgb(187, 187, 187);
+                            width: 75px;
+
+                        }
+                    }
+
+                    .formlugar {
+                        text-align: center;
+                        padding-top: 30px;
+
+                        input {
+                            background-color: rgb(187, 187, 187);
+                            width: 60%;
+
+                        }
+
                     }
                 }
-
 
                 .formpregunta {
                     padding: 20px;
@@ -502,6 +499,10 @@ text-align: justify;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    border: 1px solid rgb(66, 66, 66);
+                    margin: 1.2em;
+                    padding-bottom: 1em;
+                    background-image: url(../img/backgrounds/marmolnegrotransp1.png);
 
                     textarea {
                         background-color: rgb(187, 187, 187);
@@ -510,74 +511,105 @@ text-align: justify;
                     h4 {
                         text-align: center;
                         padding: 0.5em;
-                                            }
+                    }
 
                     .botonenviar {
                         font-family: "roboto";
                         background-image: linear-gradient(90deg, $celeste, $violeta);
                     }
 
-
-
                 }
             }
         }
 
-        }
-
-    footer {
-            grid-area: foot;
-        }
-
-        }
-    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<CONTACTO DESKTOP>>>>>>>>>>>>>
-
-    @media screen and (min-width: $desktop) {
-        .grillacontacto {
-
-
-            main {
-                .boxcontacto {
-
-                    form {
-                        display: grid;
-                        grid-template-columns: 50% 50%;
-                        grid-template-rows: 100%;
-                        gap: 10px;
-                        grid-template-areas:
-                            "año pregunta";
-
-                        .formaño {
-                            text-align: left;
-                            grid-area: año;
-                            padding-left: 4em;
-                            padding-top: 6em;
-                            label {padding-right: 10px;}
-                        }
-
-                        .formpregunta {
-                            grid-area: pregunta;
-
-                            textarea {width: 80%;
-                            height: 70%;}
-                            input {width: 80%;
-                            }
-
-                            h4 {
-                                text-align: left;
-                            padding-left: 0px;
-                            }
-                        }
-
-                    }
-
-
-                }
-
-
-            }
-        }
     }
 
+    footer {
+        grid-area: foot;
+    }
 
-    
+}
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<CONTACTO DESKTOP>>>>>>>>>>>>>
+
+@media screen and (min-width: $desktop) {
+    .grillacontacto {
+
+        main {
+            .boxcontacto {
+
+                form {background-image: url(../img/backgrounds/marmolnegro.jpg);
+                     display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 100%;
+                    grid-template-areas:
+                        "año pregunta";
+
+                    .añolugar {
+                        border: none;
+                        margin-left: 1.2em;
+                        padding: 8.6em;
+                        background-color: rgba(39, 38, 38, 0.8);
+                        background-image: none;
+
+                        .formaño {
+                            font-size: 1.2em;
+                            grid-area: año;
+                            text-align: center;
+                            padding-bottom: 10px;
+                            label {color:white}
+
+                            input {
+                                width: 80px;
+
+                            }
+                        }
+
+                        .formlugar {
+
+                            font-size: 1.2em;
+                            label {color:white}
+
+                            input {
+                                background-color: rgb(187, 187, 187);
+                                width: 200px;
+                            }
+
+                        }
+                    }
+
+                    .formpregunta {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border: none;
+                        padding-bottom: 30px;
+                        grid-area: pregunta;
+                        background: {color: rgba(39, 38, 38, 0.8);
+                        image: none;}
+
+                        textarea {
+                            width: 80%;
+                            height: 50%;
+                        }
+
+                        input {
+                            width: 80%;
+
+                        }
+
+                        h4 {
+                            text-align: center;
+                            padding-left: 0px;
+                            font-size: 1.5em;
+                        }
+                    }
+
+                }
+
+            }
+
+
+        }
+    }
+}

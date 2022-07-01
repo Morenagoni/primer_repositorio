@@ -21,8 +21,8 @@ footer {
     width: 2.3em;
     height: 2.3em; }
     footer .logoig:hover, footer .logotumblr:hover {
-      width: 2.8em;
-      height: 2.8em; }
+      width: 2.5em;
+      height: 2.5em; }
   footer .guillefooter {
     color: #141106;
     text-align: center;
@@ -41,62 +41,89 @@ footer {
 header {
   background-image: linear-gradient(90deg, #0f97a4, #8720ac);
   background-size: cover;
-  background-attachment: scroll;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center; }
+  background-attachment: scroll; }
   header h1 {
-    padding-top: 1em;
     font-family: "koulen";
-    font-style: italic;
-    font-size: 1.6em;
-    color: black; }
-  header nav button {
-    display: inline-block;
-    justify-content: center; }
-  header nav ul {
-    list-style-type: none;
+    font-style: italic; }
+  header .navbar .menu,
+  header .navbar .menu-check {
+    display: none; }
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    header nav ul li a {
-      text-decoration: none;
-      font-family: "Merriweather";
-      font-size: 1em;
+    header h1 {
+      font-size: 1.6em;
       color: black;
-      font-weight: bold;
-      padding: 8px;
-      display: block;
-      float: none;
-      border-top: 1px solid rgba(0, 0, 0, 0.3); }
+      padding-top: 20px; }
+    header .navbar {
+      display: flex;
+      flex-direction: center;
+      justify-content: center; }
+      header .navbar .menu-check:not(:checked) ~ nav {
+        display: none; }
+      header .navbar .menu-check:checked ~ nav {
+        display: block; }
+      header .navbar .menu {
+        display: block;
+        font-family: "roboto";
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 1.2em;
+        font-weight: bold;
+        position: absolute;
+        top: 0.1%; }
+      header .navbar .menu-cerrar {
+        display: none; }
+      header .navbar .menu-check:checked ~ label .menu-abrir {
+        display: none; }
+      header .navbar .menu-check:checked ~ label .menu-cerrar {
+        display: block; }
+      header .navbar nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1.2em; }
+        header .navbar nav ul li a {
+          text-decoration: none;
+          font-family: "Merriweather";
+          font-size: 1em;
+          color: black;
+          font-weight: bold;
+          padding: 6px;
+          display: block;
+          float: none;
+          border-top: 1px solid rgba(0, 0, 0, 0.3); } }
 
 @media screen and (min-width: 768px) {
   header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    float: inline-end; }
+    align-items: center; }
     header h1 {
       font-size: 2.2em;
       color: #2051ac;
-      text-align: left;
-      margin: 10px; }
-    header nav ul {
+      text-align: left; }
+    header .navbar nav ul {
       list-style-type: none;
       display: flex;
       flex-direction: row;
-      justify-content: center; }
-      header nav ul li a {
+      justify-content: space-between; }
+      header .navbar nav ul li a {
         text-decoration: none;
         font-family: "Merriweather";
         font-size: 1em;
         color: white;
         padding: 8px;
         border-top: none; }
-        header nav ul li a:hover {
+        header .navbar nav ul li a:hover {
           color: goldenrod;
-          font-size: 1.2em; }
-        header nav ul li a:active {
+          font-size: 1.1em; }
+        header .navbar nav ul li a:active {
           font-size: 1em; }
     header .item-home,
     header .item-prints,
@@ -145,7 +172,9 @@ h3 {
   .grillaindex header {
     grid-area: head; }
   .grillaindex main {
-    grid-area: main; }
+    grid-area: main;
+    margin-top: 3em;
+    margin-bottom: 3em; }
   .grillaindex footer {
     grid-area: foot; }
   @media screen and (max-width: 768px) {
@@ -181,13 +210,13 @@ h3 {
   display: grid;
   grid-template-columns: fit-content 50% 50%;
   grid-template-rows: 1fr auto 1fr;
-  gap: 10px;
   grid-template-areas: "head head" "main main" "foot foot"; }
   .grillabio header {
     grid-area: head; }
   .grillabio main {
     grid-area: main;
-    padding: 1em; }
+    overflow-x: hidden;
+    padding: 0.8em; }
   .grillabio footer {
     grid-area: foot; }
   .grillabio .biografia h3 {
@@ -197,11 +226,12 @@ h3 {
   .grillabio .biografia .obra .p2,
   .grillabio .biografia .obra .p3,
   .grillabio .biografia .obra .p4 {
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: justify; }
   .grillabio .recorridos {
     text-align: justify;
-    padding: 2px; }
+    padding: 2px;
+    font-size: 1.2em; }
     .grillabio .recorridos ul,
     .grillabio .recorridos ol {
       padding-left: 5px;
@@ -210,8 +240,9 @@ h3 {
     .grillabio .recorridos h3 {
       padding-top: 30px;
       text-align: center;
-      font-family: koulen;
-      font-weight: 300; }
+      font-family: "koulen";
+      font-weight: 300;
+      font-size: 1.3em; }
     .grillabio .recorridos h4 {
       font-size: larger;
       color: #8720ac;
@@ -221,33 +252,34 @@ h3 {
       padding-bottom: 5px; }
   .grillabio .fotobio {
     display: flex;
-    justify-content: center;
-    height: 300px; }
+    justify-content: center; }
+    .grillabio .fotobio .fotoguille {
+      width: 350px; }
 
 @media screen and (min-width: 768px) {
-  .grillabio main .fotobio {
-    height: 500px;
-    padding: 10px; }
-  .grillabio main .biografia h3 {
-    font-size: 1.6em; }
-  .grillabio main .biografia .obra .p1 {
-    font-size: 1.5em; }
-  .grillabio main .biografia .obra .p2 {
-    font-size: 1.5em; }
-  .grillabio main .biografia .obra .p3 {
-    font-size: 1.5em; }
-  .grillabio main .biografia .obra .p4 {
-    font-size: 1.5em; }
-  .grillabio main .biografia .recorridos h3 {
-    text-align: center;
-    font-size: 1.6em; }
-  .grillabio main .biografia .recorridos h4 {
-    font-size: 1.5em;
-    text-align: left; }
-  .grillabio main .biografia .recorridos ul,
-  .grillabio main .biografia .recorridos ol {
-    font-size: larger;
-    padding-left: 50px; } }
+  .grillabio main {
+    padding: 1em; }
+    .grillabio main .fotobio {
+      padding: 10px; }
+      .grillabio main .fotobio .fotoguille {
+        width: 500px; }
+    .grillabio main .biografia h3 {
+      font-size: 1.6em; }
+    .grillabio main .biografia .obra .p1, .grillabio main .biografia .obra .p2, .grillabio main .biografia .obra .p3, .grillabio main .biografia .obra .p4 {
+      font-size: 1.5em; }
+    .grillabio main .biografia .recorridos h3 {
+      text-align: center;
+      font-size: 1.6em; }
+    .grillabio main .biografia .recorridos h4 {
+      font-size: 1.5em;
+      text-align: left; }
+    .grillabio main .biografia .recorridos ul,
+    .grillabio main .biografia .recorridos ol {
+      font-size: larger;
+      padding-left: 50px; } }
+
+main {
+  overflow-x: hidden; }
 
 .animate__animated.animate__headShake {
   --animate-duration: 3.5s; }
@@ -262,8 +294,6 @@ h3 {
     grid-template-areas: "head" "video" "virtu" "foot"; }
     .grilla3d .header3d {
       grid-area: head; }
-    .grilla3d .textovirual {
-      grid-area: virtu; }
     .grilla3d .videosmusica {
       grid-area: video;
       display: flex;
@@ -274,6 +304,7 @@ h3 {
     .grilla3d .titulo3d {
       text-align: center; }
     .grilla3d .textovirtual {
+      grid-area: virtu;
       text-align: justify;
       padding-bottom: 2em;
       padding-top: 2em;
@@ -318,10 +349,6 @@ h3 {
     .grilla3d header {
       grid-area: head;
       padding: 10px; }
-    .grilla3d .textovirtual {
-      grid-area: virtu;
-      padding: 10px;
-      text-align: justify; }
     .grilla3d .videosmusica {
       grid-area: video; }
     .grilla3d .footer3d {
@@ -339,13 +366,15 @@ h3 {
       .grilla3d .videos3d iframe {
         padding-top: 10px; }
     .grilla3d .textovirtual {
-      margin: 20px; }
+      grid-area: virtu;
+      padding: 3px;
+      text-align: left; }
       .grilla3d .textovirtual .textovirtualidad,
       .grilla3d .textovirtual .titulovirtualidad {
-        padding-bottom: 4em;
-        padding-left: 2em;
-        font-size: 1.2em;
-        padding-top: 4.5em; } }
+        padding-bottom: 3.5em;
+        padding-left: 0.9em;
+        font-size: 1.5em;
+        padding-top: 4em; } }
 
 .grillacontacto {
   height: auto;
@@ -353,7 +382,6 @@ h3 {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr auto 1fr;
-  gap: 10px;
   grid-template-areas: "head head" "main main" "foot foot"; }
   .grillacontacto header {
     grid-area: head; }
@@ -362,53 +390,94 @@ h3 {
     flex-direction: column;
     justify-content: center;
     grid-area: main;
-    padding-bottom: 20px;
     padding-bottom: 3em; }
     .grillacontacto main h2 {
       padding-bottom: 10px; }
-    .grillacontacto main .boxcontacto form .formaño {
-      text-align: center;
-      padding-top: 20px; }
-      .grillacontacto main .boxcontacto form .formaño input {
-        background-color: #bbbbbb; }
-    .grillacontacto main .boxcontacto form .formpregunta {
-      padding: 20px;
-      width: 90%;
+    .grillacontacto main .boxcontacto form {
       display: flex;
       flex-direction: column;
-      justify-content: center; }
-      .grillacontacto main .boxcontacto form .formpregunta textarea {
-        background-color: #bbbbbb; }
-      .grillacontacto main .boxcontacto form .formpregunta h4 {
-        text-align: center;
-        padding: 0.5em; }
-      .grillacontacto main .boxcontacto form .formpregunta .botonenviar {
-        font-family: "roboto";
-        background-image: linear-gradient(90deg, #0f97a4, #8720ac); }
+      align-items: center; }
+      .grillacontacto main .boxcontacto form .añolugar {
+        margin: 1em;
+        border: 1px solid #424242;
+        padding: 1.6em;
+        background-image: url(../img/backgrounds/marmolnegrotransp2.png); }
+        .grillacontacto main .boxcontacto form .añolugar .formaño {
+          text-align: center; }
+          .grillacontacto main .boxcontacto form .añolugar .formaño input {
+            background-color: #bbbbbb;
+            width: 75px; }
+        .grillacontacto main .boxcontacto form .añolugar .formlugar {
+          text-align: center;
+          padding-top: 30px; }
+          .grillacontacto main .boxcontacto form .añolugar .formlugar input {
+            background-color: #bbbbbb;
+            width: 60%; }
+      .grillacontacto main .boxcontacto form .formpregunta {
+        padding: 20px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid #424242;
+        margin: 1.2em;
+        padding-bottom: 1em;
+        background-image: url(../img/backgrounds/marmolnegrotransp1.png); }
+        .grillacontacto main .boxcontacto form .formpregunta textarea {
+          background-color: #bbbbbb; }
+        .grillacontacto main .boxcontacto form .formpregunta h4 {
+          text-align: center;
+          padding: 0.5em; }
+        .grillacontacto main .boxcontacto form .formpregunta .botonenviar {
+          font-family: "roboto";
+          background-image: linear-gradient(90deg, #0f97a4, #8720ac); }
   .grillacontacto footer {
     grid-area: foot; }
 
 @media screen and (min-width: 768px) {
   .grillacontacto main .boxcontacto form {
+    background-image: url(../img/backgrounds/marmolnegro.jpg);
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
-    gap: 10px;
     grid-template-areas: "año pregunta"; }
-    .grillacontacto main .boxcontacto form .formaño {
-      text-align: left;
-      grid-area: año;
-      padding-left: 4em;
-      padding-top: 6em; }
-      .grillacontacto main .boxcontacto form .formaño label {
-        padding-right: 10px; }
+    .grillacontacto main .boxcontacto form .añolugar {
+      border: none;
+      margin-left: 1.2em;
+      padding: 8.6em;
+      background-color: rgba(39, 38, 38, 0.8);
+      background-image: none; }
+      .grillacontacto main .boxcontacto form .añolugar .formaño {
+        font-size: 1.2em;
+        grid-area: año;
+        text-align: center;
+        padding-bottom: 10px; }
+        .grillacontacto main .boxcontacto form .añolugar .formaño label {
+          color: white; }
+        .grillacontacto main .boxcontacto form .añolugar .formaño input {
+          width: 80px; }
+      .grillacontacto main .boxcontacto form .añolugar .formlugar {
+        font-size: 1.2em; }
+        .grillacontacto main .boxcontacto form .añolugar .formlugar label {
+          color: white; }
+        .grillacontacto main .boxcontacto form .añolugar .formlugar input {
+          background-color: #bbbbbb;
+          width: 200px; }
     .grillacontacto main .boxcontacto form .formpregunta {
-      grid-area: pregunta; }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: none;
+      padding-bottom: 30px;
+      grid-area: pregunta;
+      background-color: rgba(39, 38, 38, 0.8);
+      background-image: none; }
       .grillacontacto main .boxcontacto form .formpregunta textarea {
         width: 80%;
-        height: 70%; }
+        height: 50%; }
       .grillacontacto main .boxcontacto form .formpregunta input {
         width: 80%; }
       .grillacontacto main .boxcontacto form .formpregunta h4 {
-        text-align: left;
-        padding-left: 0px; } }
+        text-align: center;
+        padding-left: 0px;
+        font-size: 1.5em; } }

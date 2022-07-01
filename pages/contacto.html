@@ -23,31 +23,35 @@
     <div class="grillacontacto">
 
         <header>
-            <div class="headerlistah1 lg-d-flex align-items-center">
-                <div class="nombresitio">
-                    <h1 class="display- fw-bold lg-text-start container-fluid ">Guillermina Sgro</h1>
-                </div>
+               <div class="nombresitio pt-3">
+                <h1 class="display- fw-bold lg-text-start container-fluid">Guillermina Sgro</h1>
+              </div>
+              <div class="navbar">
+<input class=menu-check type="checkbox" id="menu-check">
+<label class=menu id="menu" for="menu-check">
 
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container-fluid">
+    <span class="menu-abrir" id="menu-abrir">&#9776;</span>
 
-                        <ul class="listanav">
-                            <li class="item-home"><a href="../index.html">Home</a></li>
+    <span class="menu-cerrar" id="menu-cerrar">▲</span>
 
-                            <li class="item-tresd"><a href="./3d.html"> 3D</a></li>
+</label>
+<nav>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="item-home"><a href="../index.html">Home</a></li>
 
-                            <li class="item-prints"><a href="./prints.html">Prints</a></li>
+        <li class="item-tresd"><a href="./3d.html"> 3D</a></li>
 
-                            <li class="item-bio"><a href="./bio.html">Bio</a></li>
+        <li class="item-prints"><a href="./prints.html">Prints</a></li>
 
-                            <li class="item-contacto"><a href="#">Contacto</a></li>
+        <li class="item-bio"><a href="./bio.html">Bio</a></li>
 
-                        </ul>
-                    </div>
-                </nav>
+        <li class="item-contacto"><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+</div>
+    </header>
+                         
 
-            </div>
-        </header>
 
         <main class="maincontacto">
 
@@ -55,13 +59,21 @@
 
             <div class="boxcontacto">
 
-                <form action="" method="get">
-                    <div class="formaño" data-aos="fade-right">
-                        <label for="año">Año de nacimiento</label>
+                <form action="" method="get" data-aos= "fade-up">
+                    <div class="añolugar">
+                
+                    <div class="formaño" data-aos="fade-left">
+                        <label class="textoaño" for="año">Año de nacimiento</label>
                         <input type="text" name="año" id="año">
                     </div>
+                    <div class="formlugar" data-aos="fade-right">
+                        <label class="textociudad" for="año">Ciudad</label>
+                        <input type="text" name="año" id="año">
+                    </div>
+
+                    </div>
                     <div class="formpregunta" data-aos="flip-down">
-                        <h4 class="preguntaform">¿Por qué odias el mundo?</h4>
+                        <h4 class="preguntaform">¿Qué es la virtualidad para vos?</h4>
                         <textarea name="" id="" cols="25" rows="10"></textarea>
                         <input class="botonenviar" type="submit" value="enviar">
                     </div>
