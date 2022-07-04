@@ -291,6 +291,9 @@ main {
     --animate-duration: 3.5s;
 }
 
+@media only screen and (min-width: $desktop) {main {margin-left: 0.5em;
+margin-right: 0.5em;}}
+
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 3D >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 @media only screen and (max-width: $desktop) {
@@ -402,7 +405,10 @@ main {
 
         .videosmusica {
             grid-area: video;
-        }
+        .videos {margin-left: 1.5em;
+
+
+        } }
 
         .footer3d {
             grid-area: foot;
@@ -413,7 +419,7 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            padding-left: 2em;
+            padding-left: 1.5em;
 
             h2 {
                 text-align: center;
@@ -438,7 +444,7 @@ main {
             .textovirtualidad,
             .titulovirtualidad {
                 padding-bottom: 3.5em;
-                padding-left: 0.9em;
+                padding-left: 1em;
                 font-size: 1.5em;
                 padding-top: 4em;
             }
@@ -446,6 +452,9 @@ main {
         }
     }
 }
+
+
+
 
 //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>CONTACTO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

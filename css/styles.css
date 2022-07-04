@@ -289,6 +289,11 @@ main {
 .animate__animated.animate__headShake {
   --animate-duration: 3.5s; }
 
+@media only screen and (min-width: 768px) {
+  main {
+    margin-left: 0.5em;
+    margin-right: 0.5em; } }
+
 @media only screen and (max-width: 768px) {
   .grilla3d {
     height: auto;
@@ -356,6 +361,8 @@ main {
       padding: 10px; }
     .grilla3d .videosmusica {
       grid-area: video; }
+      .grilla3d .videosmusica .videos {
+        margin-left: 1.5em; }
     .grilla3d .footer3d {
       grid-area: foot; }
     .grilla3d .videos3d {
@@ -363,7 +370,7 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding-left: 2em; }
+      padding-left: 1.5em; }
       .grilla3d .videos3d h2 {
         text-align: center; }
       .grilla3d .videos3d h3 {
@@ -377,7 +384,7 @@ main {
       .grilla3d .textovirtual .textovirtualidad,
       .grilla3d .textovirtual .titulovirtualidad {
         padding-bottom: 3.5em;
-        padding-left: 0.9em;
+        padding-left: 1em;
         font-size: 1.5em;
         padding-top: 4em; } }
 
