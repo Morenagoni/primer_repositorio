@@ -34,7 +34,7 @@ header {
     header {
         h1 {
             font-size: 2.2em;
-            color: black;
+            color: $colordark;
             padding-top: 20px;
             margin-bottom: 0px;
         }
@@ -61,7 +61,7 @@ header {
             .menu {
                 display: block;
                 font-family: "roboto";
-                color: $iconoresponsive;
+                color: $colordark;
                 font-size: 1.2em;
                 font-weight: bold;
                 position: absolute;
@@ -93,7 +93,7 @@ header {
                         text-decoration: none;
                         font-family: "Merriweather";
                         font-size: 1em;
-                        color: black;
+                        color: $colordark;
                         font-weight: bold;
                         padding: 6px;
                         display: block;
